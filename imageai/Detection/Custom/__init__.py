@@ -13,11 +13,13 @@ from imageai.Detection.Custom.callbacks import CustomModelCheckpoint, CustomTens
 from imageai.Detection.Custom.utils.multi_gpu_model import multi_gpu_model
 from imageai.Detection.Custom.gen_anchors import generateAnchors
 import tensorflow as tf
+from tensorflow.keras.utils import img_to_array
 from keras.models import load_model
 from keras.layers import Input
 from keras.callbacks import TensorBoard
 import keras.backend as K
 import cv2
+from PIL import Image
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
